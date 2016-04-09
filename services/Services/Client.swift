@@ -1,6 +1,6 @@
 public class Client {
 
-    public var delegate: ClientDelegate?
+    public weak var delegate: ClientDelegate?
 
     public typealias ResponseCallback = (Response) -> Void
 
@@ -16,7 +16,7 @@ public class Client {
     }
 
     private func service(endpoint: String, callback: ResponseCallback?) {
-        service.get(endpoint) { [unowned self] data in
+        service.get(endpoint) { data in
             let response = Response(data: data)
             self.delegate?.didEndGetWithResponse(response)
             if let callback = callback {
