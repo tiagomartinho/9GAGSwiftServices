@@ -1,5 +1,5 @@
-# services
-A bootstrap project for your networking framework to your iOS/tvOS/OSX/watchOS application
+# 9GAGSwiftServices
+A simple way to access the infinigag API from your cocoa application
 
 ## Requirements
 
@@ -22,7 +22,7 @@ To integrate Webhose into your Xcode project using CocoaPods, specify it in your
 platform :ios, '8.0' #or :tvos, '9.0' #or :osx, '10.9' #or :watchos, '2.0'
 use_frameworks!
 
-pod 'Services', :git => 'https://github.com/tiagomartinho/services'
+pod 'Services', :git => 'https://github.com/tiagomartinho/9GAGSwiftServices'
 ```
 
 Then, run the following command:
