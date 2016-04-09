@@ -25,14 +25,14 @@ class ReponseSpec: QuickSpec {
                 beforeEach {
                     Stub.correctResponse()
                 }
-                it("to have results") {
+                it("has results") {
                     var totalResults: Int?
                     client.get { response in
                         totalResults = response.items.count
                     }
                     expect(totalResults).toEventually(equal(2))
                 }
-                it("to have an image") {
+                it("has an image") {
                     var image: String?
                     client.get { response in
                         image = response.items.first?.image
@@ -40,7 +40,7 @@ class ReponseSpec: QuickSpec {
                     let expectedImage = "http://img-9gag-fun.9cache.com/photo/aMGWb0G_700b.jpg"
                     expect(image).toEventually(equal(expectedImage))
                 }
-                it("to have a caption") {
+                it("has a caption") {
                     var caption: String?
                     client.get { response in
                         caption = response.items[1].caption
