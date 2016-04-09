@@ -1,6 +1,6 @@
 public class Client {
 
-    public var delegate: ClientDelegate?
+    public weak var delegate: ClientDelegate?
 
     public typealias ResponseCallback = (Response) -> Void
 
