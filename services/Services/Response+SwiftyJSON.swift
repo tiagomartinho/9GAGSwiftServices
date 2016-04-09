@@ -8,6 +8,6 @@ extension Response {
     }
 
     init(json: JSON) {
-        self.items = Item.collection(json["items"]) ?? [Item]()
+        self.items = Item.collection(json["data"]) ?? [Item]()
     }
 }

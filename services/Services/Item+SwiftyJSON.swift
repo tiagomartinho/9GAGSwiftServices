@@ -2,8 +2,8 @@ import SwiftyJSON
 
 extension Item {
     init(json: JSON) {
-        self.uuid = json["uuid"].stringValue
-        self.name = json["name"].stringValue
+        self.caption = json["caption"].stringValue
+        self.image = json["images"]["large"].stringValue
     }
 }
 
