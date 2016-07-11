@@ -15,6 +15,11 @@ public class Client {
         service(endpoint, callback: callback)
     }
 
+    public func next(response: Response, callback: ResponseCallback? = nil) {
+        let endpoint = EndpointFactory.build(response)
+        service(endpoint, callback: callback)
+    }
+
     private func service(endpoint: String, callback: ResponseCallback?) {
         service.get(endpoint) { data in
             let response = Response(data: data)

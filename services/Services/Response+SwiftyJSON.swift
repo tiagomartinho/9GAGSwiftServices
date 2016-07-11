@@ -9,5 +9,6 @@ extension Response {
 
     init(json: JSON) {
         self.items = Item.collection(json["data"]) ?? [Item]()
+        self.nextPage = json["paging"]["next"].stringValue
     }
 }
