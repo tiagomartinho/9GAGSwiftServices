@@ -7,7 +7,7 @@ class EndpointFactory {
         return http + endpoint + hot
     }
 
-    static func build(response: Response) -> String {
-        return http + endpoint + hot + "/" + response.nextPage
+    static func build(nextPage: String) -> String {
+        return http + endpoint + hot + "/" + nextPage
     }
 }

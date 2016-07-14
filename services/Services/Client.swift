@@ -15,8 +15,8 @@ public class Client {
         service(endpoint, callback: callback)
     }
 
-    public func next(response: Response, callback: ResponseCallback? = nil) {
-        let endpoint = EndpointFactory.build(response)
+    public func next(nextPage: String, callback: ResponseCallback? = nil) {
+        let endpoint = EndpointFactory.build(nextPage)
         service(endpoint, callback: callback)
     }
 
