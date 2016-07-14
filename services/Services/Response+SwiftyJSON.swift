@@ -10,5 +10,6 @@ extension Response {
     init(json: JSON) {
         self.items = Item.collection(json["data"]) ?? [Item]()
         self.nextPage = json["paging"]["next"].stringValue
+        self.media = json["media"]["mp4"].string
     }
 }
