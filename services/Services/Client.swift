@@ -10,13 +10,13 @@ public class Client {
         self.service = AlamofireService()
     }
 
-    public func get(callback: ResponseCallback? = nil) {
-        let endpoint = EndpointFactory.build()
+    public func get(section: Section = .Hot, callback: ResponseCallback? = nil) {
+        let endpoint = EndpointFactory.build(section)
         service(endpoint, callback: callback)
     }
 
-    public func next(nextPage: String, callback: ResponseCallback? = nil) {
-        let endpoint = EndpointFactory.build(nextPage)
+    public func next(nextPage: String, section: Section = .Hot, callback: ResponseCallback? = nil) {
+        let endpoint = EndpointFactory.build(section, nextPage: nextPage)
         service(endpoint, callback: callback)
     }
 
