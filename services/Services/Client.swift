@@ -33,7 +33,7 @@ public class Client {
     }
 
     public func flag(item: Item) {
-        let parameters = ["id": NSUUID(), "link": item.image]
+        let parameters = ["link": item.image]
         service.post(EndpointFactory.blockContent,
                      parameters: parameters,
                      headers: nil, callback: { data in })
