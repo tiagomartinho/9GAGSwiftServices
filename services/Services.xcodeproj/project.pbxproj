@@ -25,6 +25,7 @@
 		EAA76D5D1CA0833A00AC97C6 /* ReponseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA76D5C1CA0833A00AC97C6 /* ReponseSpec.swift */; };
 		EAA76D681CA085F300AC97C6 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA76D671CA085F300AC97C6 /* Client.swift */; };
 		EAA76D6A1CA0868A00AC97C6 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA76D691CA0868A00AC97C6 /* Response.swift */; };
+		EAC180901D4D2EF300FB8531 /* BlockedContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1808F1D4D2EF300FB8531 /* BlockedContent.swift */; };
 		EAE9F4A51CA6E81A00BCE596 /* ClientDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9F4A41CA6E81A00BCE596 /* ClientDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		EAA76D5E1CA0833A00AC97C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAA76D671CA085F300AC97C6 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		EAA76D691CA0868A00AC97C6 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		EAC1808F1D4D2EF300FB8531 /* BlockedContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockedContent.swift; sourceTree = "<group>"; };
 		EAE9F4A41CA6E81A00BCE596 /* ClientDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,6 +177,7 @@
 				EA3B8ACF1CB9588F00FA1581 /* Item */,
 				EAA76D6D1CA087AF00AC97C6 /* Supporting Files */,
 				EA9007CF1D390A33008C8EE2 /* Section.swift */,
+				EAC1808F1D4D2EF300FB8531 /* BlockedContent.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				EA3B8ACE1CB9588900FA1581 /* Item+SwiftyJSON.swift in Sources */,
 				EA7B627D1CA098870059DA9C /* Service.swift in Sources */,
 				EA9007D01D390A33008C8EE2 /* Section.swift in Sources */,
+				EAC180901D4D2EF300FB8531 /* BlockedContent.swift in Sources */,
 				EA3B8ACC1CB9576200FA1581 /* Item.swift in Sources */,
 				EA942B9D1CA093EA00AE354F /* AlamofireService.swift in Sources */,
 				EAE9F4A51CA6E81A00BCE596 /* ClientDelegate.swift in Sources */,
