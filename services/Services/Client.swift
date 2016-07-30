@@ -7,8 +7,10 @@ public class Client {
     public typealias ResponseCallback = (Response) -> Void
 
     private let service: Service
+    private let privateEndpoint: String
 
-    public init() {
+    public init(privateEndpoint: String) {
+        self.privateEndpoint = privateEndpoint
         self.service = AlamofireService()
     }
 
@@ -32,9 +34,9 @@ public class Client {
         }
     }
 
-    public func flag(item: Item) {
-        let parameters = ["payload": ["Item": ["link": item.image]]]
-        service.post(EndpointFactory.blockContent,
+    public func flag(item: Item, id: String) {
+        let parameters = ["payload": ["Item": ["link": item.image, "id": id]]]
+        service.post(privateEndpoint,
                      parameters: parameters,
                      headers: nil, callback: { data in })
     }
