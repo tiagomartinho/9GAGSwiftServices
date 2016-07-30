@@ -31,10 +31,11 @@ public class Client {
 
     private func service(endpoint: String, callback: ResponseCallback?) {
         service.get(endpoint) { [weak self] data in
-            let response = Response(data: data)
-            self?.delegate?.didEndGetWithResponse(response)
-            if let callback = callback {
-                callback(response)
+            if let response = self?.setBlockedContent(Response(data: data)) {
+                self?.delegate?.didEndGetWithResponse(response)
+                if let callback = callback {
+                    callback(response)
+                }
             }
         }
     }
@@ -44,5 +45,18 @@ public class Client {
         service.post(privateEndpoint,
                      parameters: parameters,
                      headers: nil, callback: { data in })
+    }
+
+    private func setBlockedContent(response: Response) -> Response {
+        let items = response.items.map { item -> Item in
+            if blockedContent.contains(item.image) {
+                return Item(caption: item.caption,
+                    image: item.image,
+                    media: item.media,
+                    blocked: true)
+            }
+            return item
+            }
+        return Response(items: items, nextPage: response.nextPage)
     }
 }
