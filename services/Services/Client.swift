@@ -19,11 +19,6 @@ public class Client {
     public func get(section: Section = .Hot, callback: ResponseCallback? = nil) {
         service.get(privateEndpoint) { [weak self] data in
             self?.blockedContent = BlockedContent.parse(data)
-            if let contents = self?.blockedContent {
-                for content in contents {
-                    print(content)
-                }
-            }
             let endpoint = EndpointFactory.build(section)
             self?.service(endpoint, callback: callback)
         }
