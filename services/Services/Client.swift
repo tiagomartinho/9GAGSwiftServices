@@ -1,3 +1,5 @@
+import Foundation
+
 public class Client {
 
     public weak var delegate: ClientDelegate?
@@ -28,5 +30,12 @@ public class Client {
                 callback(response)
             }
         }
+    }
+
+    public func flag(item: Item) {
+        let parameters = ["id": NSUUID(), "link": item.image]
+        service.post(EndpointFactory.blockContent,
+                     parameters: parameters,
+                     headers: nil, callback: { data in })
     }
 }
