@@ -40,11 +40,11 @@ public class Client {
         }
     }
 
-    public func flag(item: Item, uuid: String) {
+    public func flag(item: Item, headers: [String : String]?, uuid: String) {
         let parameters = ["payload": ["Item": ["link": item.image, "uuid": uuid]]]
         service.post(privateEndpoint,
                      parameters: parameters,
-                     headers: nil, callback: { data in })
+                     headers: headers, callback: { data in })
     }
 
     private func setBlockedContent(response: Response) -> Response {
